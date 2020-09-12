@@ -31,44 +31,43 @@ const Post = ({ post }) => {
     const {id, title } = post;
    
     const classes = useStyles();
-   
+
     return (
         
         <Card className={classes.root}>
            
-                <CardContent>
-           
-                    <Typography className={classes.title} color="textPrimary" gutterBottom>
-           
-                        Post Id:{id}
-            
-                    </Typography>
-            
-                    <Typography className={classes.pos} color="textSecondary">
-           
-                        Post Title: {title}
-             
-                 </Typography>
-            
-                </CardContent>
+           <CardContent>
+      
+               <Typography className={classes.title} color="textPrimary" gutterBottom>
+      
+                   Post Id:{id}
+       
+               </Typography>
+       
+               <Typography className={classes.pos} color="textSecondary">
+      
+                   Post Title: {title}
+        
+            </Typography>
+       
+           </CardContent>
 
-                <CardActions>
-              
-                <Link to={`/post/${id}`} style={{textDecoration:'none'}}>
-              
-               <Button variant="contained" color="primary">
-              
-                    Show Details
-              
-                </Button>
-              
-                </Link>
-             
-                </CardActions>
-           
-            </Card>
-           
+           <CardActions>
+         
+           <Link to={`/post/${id}`} style={{textDecoration:'none'}}>
+         
+          <Button variant="contained" color="primary">
+         
+               Show Details
+         
+           </Button>
+         
+           </Link>
+        
+           </CardActions>
+      
+       </Card>
+
     );
 };
-
 export default Post;

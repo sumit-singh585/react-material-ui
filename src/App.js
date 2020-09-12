@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,6 +11,7 @@ import NotFound from './components/NotFound/NotFound';
 
 
 function App() {
+
   return (
      <Router>
        <Switch>
@@ -28,6 +29,8 @@ function App() {
          </Route>
        </Switch>
      </Router>
+    
+     
   );
 }
 

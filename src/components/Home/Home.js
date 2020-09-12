@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Post from '../Posts/Post';
+import Grid from '@material-ui/core/Grid';
 
 const Home = () => {
 
@@ -23,9 +24,18 @@ const Home = () => {
 
             <h2 style={{ textAlign: 'center' }}>Post Length : {posts.length}</h2>
 
-            {
-                posts.map(post => <Post post={post}></Post>)
+          
+           <Grid container spacing={3}>
+           {
+                posts.map(post =>
+                    <Grid item xs={6} sm={4} md={4}>
+                    <Post post={post}></Post>
+                    </Grid>
+                )
             }
+            </Grid>
+
+    
 
         </div>
     )
